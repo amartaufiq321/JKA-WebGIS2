@@ -1,0 +1,645 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07151c;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+
+    padding: 28px 20px;
+
+    background: rgba(4, 18, 25, 0.96);
+    border-right: 1px solid rgba(90, 220, 255, 0.15);
+
+    z-index: 10;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #55eaff;
+    border-radius: 12px;
+
+    color: #55eaff;
+    font-weight: bold;
+
+    box-shadow: 0 0 20px rgba(0,220,255,0.2);
+}
+
+
+.logo h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+.logo span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 9px;
+    color: #718b92;
+}
+
+
+/* MENU */
+
+.menu-title {
+    margin: 35px 10px 15px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #607a82;
+}
+
+
+.menu {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 15px;
+    margin-bottom: 8px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #91a9af;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.menu span {
+    width: 25px;
+
+    color: #55eaff;
+
+    font-size: 18px;
+}
+
+
+.menu:hover,
+.menu.active {
+    background: rgba(0,220,255,0.08);
+    color: white;
+
+    transform: translateX(4px);
+}
+
+
+.sidebar-bottom {
+    position: absolute;
+
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
+}
+
+
+.back {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #718b92;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.back:hover {
+    color: white;
+    border-color: #55eaff;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    margin-left: 260px;
+
+    min-height: 100vh;
+
+    padding: 30px 40px;
+
+    background:
+        radial-gradient(
+            circle at 70% 10%,
+            rgba(0,200,255,0.08),
+            transparent 30%
+        );
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+
+header p {
+    margin-top: 7px;
+
+    color: #718b92;
+
+    font-size: 13px;
+}
+
+
+.status {
+    padding: 9px 15px;
+
+    border: 1px solid rgba(0,255,180,0.2);
+    border-radius: 30px;
+
+    color: #70e7c0;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+.dot {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: #5cffc4;
+
+    box-shadow: 0 0 10px #5cffc4;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 5px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(90,220,255,0.15);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.03);
+}
+
+
+.search-icon {
+    width: 50px;
+
+    text-align: center;
+
+    color: #55eaff;
+
+    font-size: 22px;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    padding: 15px 5px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.search-box input::placeholder {
+    color: #607a82;
+}
+
+
+.search-box button {
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #0abed8;
+
+    color: #021014;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.search-box button:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 0 25px rgba(0,220,255,0.35);
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.map-container {
+    position: relative;
+
+    height: 480px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(90,220,255,0.15);
+    border-radius: 15px;
+
+    background: #0a2028;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.25);
+}
+
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(0,220,255,0.03) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0,220,255,0.03) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+.qgis-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}}
+
+
+.map-message {
+    text-align: center;
+
+    color: #66858d;
+}
+
+
+.map-icon {
+    font-size: 55px;
+
+    color: #55eaff;
+
+    text-shadow:
+        0 0 30px rgba(0,220,255,0.4);
+}
+
+
+.map-message h2 {
+    margin-top: 10px;
+
+    color: #b8d9df;
+
+    letter-spacing: 3px;
+}
+
+
+.map-message p {
+    margin-top: 10px;
+
+    font-size: 12px;
+}
+
+
+.map-message span {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 6px 12px;
+
+    border: 1px solid rgba(90,220,255,0.2);
+    border-radius: 20px;
+
+    color: #55eaff;
+
+    font-size: 9px;
+}
+
+
+/* MAP INFO */
+
+.map-info {
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 15px 18px;
+
+    border: 1px solid rgba(90,220,255,0.15);
+    border-radius: 12px;
+
+    background: rgba(4,18,25,0.92);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.map-info small,
+.card small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #607a82;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.map-info strong {
+    font-size: 14px;
+}
+
+
+.view360 {
+    margin-left: auto;
+
+    padding: 11px 20px;
+
+    border: 1px solid #55eaff;
+    border-radius: 8px;
+
+    background: rgba(0,220,255,0.08);
+
+    color: #55eaff;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.view360:hover {
+    background: #55eaff;
+
+    color: #021014;
+
+    box-shadow:
+        0 0 25px rgba(0,220,255,0.4);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(90,220,255,0.12);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.025);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(90,220,255,0.35);
+
+    background:
+        rgba(0,220,255,0.04);
+}
+
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(0,220,255,0.08);
+
+    color: #55eaff;
+
+    font-size: 18px;
+}
+
+
+.card h3 {
+    font-size: 12px;
+
+    color: #c9e0e4;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main {
+        margin-left: 210px;
+
+        padding: 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+
+.location-menu {
+    display: none;
+    margin: 5px 15px;
+    padding: 10px;
+    background: #071820;
+    border: 1px solid rgba(0, 200, 255, 0.25);
+    border-radius: 10px;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.location-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: #00c8ff;
+    padding: 8px;
+}
+
+.floor-title {
+    font-size: 10px;
+    color: #7d9aa5;
+    padding: 5px 8px;
+}
+
+.location-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 3px 0;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #d9e8ed;
+    text-align: left;
+    cursor: pointer;
+}
+
+.location-menu button:hover {
+    background: rgba(0, 200, 255, 0.12);
+    color: #00c8ff;
+}
