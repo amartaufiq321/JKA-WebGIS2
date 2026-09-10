@@ -642,4 +642,102 @@ header p {
 .location-menu button:hover {
     background: rgba(0, 200, 255, 0.12);
     color: #00c8ff;
+}/* MOBILE MENU BUTTON */
+.mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .mobile-menu-btn {
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9999;
+
+        width: 42px;
+        height: 65px;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(94, 239, 255, 0.7);
+        border-left: none;
+        border-radius: 0 15px 15px 0;
+
+        background: rgba(7, 24, 32, 0.95);
+        color: #5eefff;
+
+        font-size: 22px;
+        cursor: pointer;
+
+        box-shadow: 0 0 10px rgba(94, 239, 255, 0.25);
+    }
+
+    .sidebar {
+        position: fixed !important;
+        left: -260px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 250px !important;
+        z-index: 9998;
+
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.mobile-open {
+        left: 0 !important;
+    }
+}/* ===== MOBILE SIDEBAR ===== */
+
+#mobileMenuBtn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    #mobileMenuBtn {
+        display: flex !important;
+
+        position: fixed !important;
+        left: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+
+        width: 45px !important;
+        height: 65px !important;
+
+        z-index: 99999 !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: #071820 !important;
+        color: #5eefff !important;
+
+        border: 2px solid #5eefff !important;
+        border-left: none !important;
+        border-radius: 0 15px 15px 0 !important;
+
+        font-size: 24px !important;
+    }
+
+    .sidebar {
+        position: fixed !important;
+        left: -270px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+
+        width: 260px !important;
+
+        z-index: 99998 !important;
+
+        transition: left 0.3s ease !important;
+    }
+
+    .sidebar.mobile-open {
+        left: 0 !important;
+    }
 }

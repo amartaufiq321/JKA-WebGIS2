@@ -940,3 +940,6 @@ function selectLocation(location) {
 
     document.getElementById("locationMenu").style.display = "none";
 }
+function toggleMobileMenu() {
+    document.querySelector(".sidebar").classList.toggle("mobile-open");
+}
